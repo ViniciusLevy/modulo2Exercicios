@@ -31,8 +31,8 @@ Você deve implementar um sistema básico que representa um jogo com 4 tipos de 
 * Interagir: deve imprimir "Me desculpe"
 
 ## Dicas finais
-Apesar de ser um exercício de polimorfismo tente utilizar os demais conceitos aprendidos no exercício.
-Crie quantas classes, variáveis e métodos achar necessários para executar exercício.
-Tente ser declarativo em relação ao nome dos métodos, classes e variáveis.
-Não guarde as dúvidas para você, compartilhe com os professores e a turma, as vezes mais colegas estão com o mesmo problema, ou é uma questão que não foi pensada inicialmente pelos professores.
-Aproveite o exercício para fixar os conceitos ensinados em aula.
+* Apesar de ser um exercício de polimorfismo tente utilizar os demais conceitos aprendidos no exercício.
+* Crie quantas classes, variáveis e métodos achar necessários para executar exercício.
+* Tente ser declarativo em relação ao nome dos métodos, classes e variáveis.
+* Não guarde as dúvidas para você, compartilhe com os professores e a turma, as vezes mais colegas estão com o mesmo problema, ou é uma questão que não foi pensada inicialmente pelos professores.
+* Aproveite o exercício para fixar os conceitos ensinados em aula.
