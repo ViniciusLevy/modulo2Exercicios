@@ -9,24 +9,26 @@ Você deve implementar um sistema básico que representa um jogo com 4 tipos de 
 # Regras de Implementação
 
 ## Genérico
-Ataque: deve imprimir "causou 10 de dano"
-Apanhar: deve imprimir "recebeu [dano recebido] de dano"
-Interagir: deve imprimir "Por que eu responderia meu inimigo???"
 
-##Vampiro
-Ataque: deve imprimir "causou 20 de dano" e depois "seu personagem está sangrando"
-Apanhar: deve imprimir "recebeu [dano recebido] de dano", se o tipo de dano recebido for "perfurante" o dano recebido é dobrado.
-Interagir: deve imprimir "O que é um homem?"
+* Ataque: deve imprimir "causou 10 de dano"
+* Apanhar: deve imprimir "recebeu [dano recebido] de dano"
+* Interagir: deve imprimir "Por que eu responderia meu inimigo???"
 
-##Cobra
-Ataque: deve imprimir "causou 10 de dano" e depois "seu personagem está envenenado"
-Apanhar: deve imprimir "recebeu [dano recebido] de dano", se o tipo de dano recebido for "pancada" o dano recebido é dobrado.
-Interagir: deve imprimir "Se você acender a chama a maldição acaba."
+
+## Vampiro
+* Ataque: deve imprimir "causou 20 de dano" e depois "seu personagem está sangrando";
+* Apanhar: deve imprimir "recebeu [dano recebido] de dano", se o tipo de dano recebido for "perfurante" o dano recebido é dobrado.
+* Interagir: deve imprimir "O que é um homem?"
+
+## Cobra
+* Ataque: deve imprimir "causou 10 de dano" e depois "seu personagem está envenenado"
+* Apanhar: deve imprimir "recebeu [dano recebido] de dano", se o tipo de dano recebido for "pancada" o dano recebido é dobrado.
+* Interagir: deve imprimir "Se você acender a chama a maldição acaba."
 
 ## Gigante
-Ataque: deve imprimir "causou 25 de dano" e depois "seu personagem está atordoado"
-Apanhar: deve imprimir "recebeu [dano recebido] de dano", se o tipo de dano recebido for "fogo" o dano recebido é dobrado.
-Interagir: deve imprimir "Me desculpe"
+* Ataque: deve imprimir "causou 25 de dano" e depois "seu personagem está atordoado"
+* Apanhar: deve imprimir "recebeu [dano recebido] de dano", se o tipo de dano recebido for "fogo" o dano recebido é dobrado.
+* Interagir: deve imprimir "Me desculpe"
 
 ## Dicas finais
 Apesar de ser um exercício de polimorfismo tente utilizar os demais conceitos aprendidos no exercício.
