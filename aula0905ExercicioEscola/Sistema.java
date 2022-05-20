@@ -6,27 +6,45 @@ import java.util.List;
 public class Sistema {
 
     public static void main(String[] args) {
-
         Escola escola = new Escola();
 
-        List<Aluno> alunos = new ArrayList<>();
-        List<Funcionario> funcionarios = new ArrayList<>();
-        List<Professor> professores = new ArrayList<>();
 
-        Aluno aluno1 = new Aluno("Jose", "www", "www", 15, "A", new ArrayList<>());
+        Aluno aluno1 = new Aluno("João", "www1", "xxx", 10, "Turma 1A");
+        Aluno aluno2 = new Aluno("Marcos", "www2", "xxx", 12, "Turma 2A");
+        Aluno aluno3 = new Aluno("Maria", "www3", "xxx", 13, "Turma 3A");
 
-        Funcionario funcionario1 = new Funcionario("Roberto", "222", "111", "Cordenador", 7000);
+        List<Integer> listaNotas = new ArrayList<>();
 
-        Professor professor1 = new Professor("Paulo", "111", "222", 5000, new ArrayList<>(), new ArrayList<>());
+        aluno1.adicionaNota(10);
+        aluno1.adicionaNota(2);
+        aluno1.adicionaNota(3);
 
-        escola.adicionaAluno(aluno1);
-        escola.adicionaFuncionario(funcionario1);
-        escola.adicionaProfessor(professor1);
 
-        System.out.println(aluno1);
+        Funcionario funcionario1 = new Funcionario("Roberta", "www", "xxx", "Diretora", 10000);
+
+        Professor professor1 = new Professor("Juliana", "www", "xxx", 8000);
+        professor1.adicionaTurma();
+
+        escola.adicionarAluno(aluno1);
+        escola.adicionarAluno(aluno2);
+        escola.adicionarAluno(aluno3);
+        escola.adicionarFuncionario(funcionario1);
+
+        escola.adicionarProfessor(professor1);
+
+        escola.deletaAluno("www3");
+
         System.out.println(funcionario1);
-        System.out.println(professor1);
+
+        escola.atualizaFuncionario("Roberta", "www", "xxx", "Diretora", 13000);
+
+        System.out.println(funcionario1);
+
+        aluno1.imprimeAluno();
+
+        funcionario1.imprimeFuncionario();
+
+        professor1.imprimeProfessor();
+
     }
-
-
 }

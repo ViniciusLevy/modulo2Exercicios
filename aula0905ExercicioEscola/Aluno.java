@@ -1,23 +1,46 @@
 package modulo2Exercicios.aula0905ExercicioEscola;
 
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class Aluno extends Pessoa{
 
-    int idade;
-    String turma;
-    List<Disciplina> notas;
+    private int idade;
+    private String turma;
+    private List<Integer> listaNotas;
 
-    public Aluno(){
 
-    }
 
-    public Aluno(String nome, String cpf, String rg, int idade, String turma, List<Disciplina> disciplinas) {
+    public Aluno(String nome, String cpf, String rg, int idade, String turma) {
         super(nome, cpf, rg);
         this.idade = idade;
         this.turma = turma;
-        this.notas = disciplinas;
+        this.listaNotas = new ArrayList<>();
+    }
+
+    public void adicionaNota(int nota) {
+        listaNotas.add(nota);
+    }
+
+    public int mediaNotas() {
+        int total = 0;
+
+        for (Integer nota: listaNotas) {
+            total += nota;
+        }
+        return total / listaNotas.size();
+    }
+
+    public void imprimeAluno() {
+        imprimePessoa();
+        List<Integer> lista = new ArrayList<>();
+        System.out.println("Idade: " + getIdade());
+        System.out.println("Turma: " + getTurma());
+        System.out.println("Notas: ");
+        for (Integer nota: listaNotas) {
+            lista = getListaNotas();
+        }
+        System.out.println("Nota: " + lista);
     }
 
     public int getIdade() {
@@ -36,20 +59,17 @@ public class Aluno extends Pessoa{
         this.turma = turma;
     }
 
-    public List<Disciplina> getNotas() {
-        return notas;
+    public List<Integer> getListaNotas() {
+        return listaNotas;
     }
 
-    public void setNotas(List<Disciplina> notas) {
-        this.notas = notas;
+    public void setListaNotas(List<Integer> listaNotas) {
+        this.listaNotas = listaNotas;
     }
 
     @Override
     public String toString() {
-        return "Aluno{" +
-                "nome ='" + nome + '\'' +
-                ", cpf ='" + cpf + '\'' +
-                ", rg ='" + rg + '\'' +
-                '}';
+        return "\nNome: " + getNome() + " CPF: " + getCpf() + " RG: " + getRg() + " Idade: " + getIdade()
+              + " Turma " + getTurma() + " Notas " + getListaNotas();
     }
 }

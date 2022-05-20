@@ -1,17 +1,25 @@
 package modulo2Exercicios.aula0905ExercicioEscola;
 
-
+import java.util.ArrayList;
 import java.util.List;
 
-public class Professor extends Funcionario {
+public class Professor extends Funcionario{
 
-    List<String> turmas;
-    List<Disciplina> disciplinas;
+    private List<String> turmas;
 
-    public Professor(String nome, String cpf, String rg, double salario, List<String> turmas, List<Disciplina> disciplinas) {
+
+    public Professor(String nome, String cpf, String rg, double salario) {
         super(nome, cpf, rg, "Professor", salario);
-        this.turmas = turmas;
-        this.disciplinas = disciplinas;
+        this.turmas = new ArrayList<>();
+
+    }
+
+    public void adicionaTurma() {
+        this.turmas = getTurmas();
+    }
+    public void imprimeProfessor() {
+        imprimeFuncionario();
+        System.out.println("Turmas: " + getTurmas());
     }
 
     public List<String> getTurmas() {
@@ -21,20 +29,10 @@ public class Professor extends Funcionario {
     public void setTurmas(List<String> turmas) {
         this.turmas = turmas;
     }
-
-    public List<Disciplina> getDisciplinas() {
-        return disciplinas;
-    }
-
-    public void setDisciplinas(List<Disciplina> disciplinas) {
-        this.disciplinas = disciplinas;
-    }
-
+    
     @Override
     public String toString() {
-        return "Professor{" +
-                "turmas =" + turmas +
-                ", disciplinas =" + disciplinas +
-                '}';
+        return "\nNome: " + getNome() + " CPF: " + getCpf() + " RG: " + getRg() + " Cargo: " + getCargo() + " Salário: "
+                + getSalario() + "Turmas: " + turmas;
     }
 }

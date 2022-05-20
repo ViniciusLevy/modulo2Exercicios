@@ -2,16 +2,20 @@ package modulo2Exercicios.aula0905ExercicioEscola;
 
 public class Pessoa {
 
-    String nome;
-    String cpf;
-    String rg;
+    private String nome;
+    private String cpf;
+    private String rg;
 
-    public Pessoa() {}
-
-    public Pessoa (String nome, String cpf, String rg) {
+    public Pessoa(String nome, String cpf, String rg) {
         this.nome = nome;
         this.cpf = cpf;
         this.rg = rg;
+    }
+
+    public void imprimePessoa() {
+        System.out.println("\nNome: " + getNome());
+        System.out.println("CPF: " + getCpf());
+        System.out.println("RG: " + getRg());
     }
 
     public String getNome() {
